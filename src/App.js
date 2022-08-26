@@ -1,8 +1,9 @@
-import { Download, Features, SectionWrapper } from "./components";
+import index from "./components";
 import assets from "./assets";
 import styles from "./styles/Global";
 
 const App = () => {
+  const {Features, Download, SectionWrapper} = index
   return (
     <>
       <SectionWrapper

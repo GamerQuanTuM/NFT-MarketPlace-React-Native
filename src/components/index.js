@@ -2,4 +2,6 @@ import Features from './Features';
 import Download from './Download';
 import SectionWrapper from './SectionWrapper';
 
-export { Features, Download, SectionWrapper };
+const index = {Features, Download, SectionWrapper}
+
+export default index
