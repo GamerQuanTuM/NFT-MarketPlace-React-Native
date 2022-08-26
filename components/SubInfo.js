@@ -1,4 +1,3 @@
-import React from "react";
 import { View, Image, Text } from "react-native";
 
 import { SIZES, FONTS, COLORS, SHADOWS, assets } from "../constants";
@@ -22,19 +21,28 @@ export const NFTTitle = ({ title, subTitle, titleSize, subTitleSize }) => {
           color: COLORS.primary,
         }}
       >
-        by {subTitle}
+        {subTitle}
       </Text>
     </View>
   );
 };
 
-export const EthPrice = ({ price }) => {
+export const ETHPrice = ({ price }) => {
   return (
-    <View style={{ flexDirection: "row", alignItems: "center" }}>
+    <View
+      style={{
+        flexDirection: "row",
+        alignItems: "center",
+      }}
+    >
       <Image
         source={assets.eth}
         resizeMode="contain"
-        style={{ width: 20, height: 20, marginRight: 2 }}
+        style={{
+          width: 20,
+          height: 20,
+          marginRight: 2,
+        }}
       />
       <Text
         style={{
@@ -82,7 +90,6 @@ export const EndDate = () => {
         paddingHorizontal: SIZES.font,
         paddingVertical: SIZES.base,
         backgroundColor: COLORS.white,
-        borderRadius: SIZES.font,
         justifyContent: "center",
         alignItems: "center",
         ...SHADOWS.light,
@@ -106,7 +113,7 @@ export const EndDate = () => {
           color: COLORS.primary,
         }}
       >
-        12h 30m
+        12 hrs 30 mins
       </Text>
     </View>
   );

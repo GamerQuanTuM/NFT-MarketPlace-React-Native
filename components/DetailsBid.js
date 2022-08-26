@@ -1,48 +1,37 @@
-import React from "react";
 import { View, Text, Image } from "react-native";
 
-import { EthPrice } from "./SubInfo";
 import { COLORS, SIZES, FONTS } from "../constants";
+import { ETHPrice } from "./SubInfo";
 
-const DetailsBid = ({ bid }) => {
+export const DetailsBid = ({ bid }) => {
   return (
-    <View
-      style={{
-        width: "100%",
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
-        marginVertical: SIZES.base,
-        paddingHorizontal: SIZES.base,
-      }}
-      key={bid.id}
-    >
+    <View style={{
+      width: '100%',
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      marginVertical: SIZES.base,
+      paddingHorizontal: SIZES.base * 2,
+    }}>
       <Image
         source={bid.image}
         resizeMode="contain"
         style={{ width: 48, height: 48 }}
       />
-
-      <View
-        style={{
-          flex: 1,
-          alignItems: "center",
-          paddingHorizontal: SIZES.base,
-        }}
-      >
+      <View>
         <Text
           style={{
-            fontFamily: FONTS.semiBold,
             fontSize: SIZES.small,
+            fontFamily: FONTS.semiBold,
             color: COLORS.primary,
           }}
         >
-          Bid placed by {bid.name}
+          Bid Placed by {bid.name}
         </Text>
         <Text
           style={{
-            fontFamily: FONTS.regular,
             fontSize: SIZES.small - 2,
+            fontFamily: FONTS.regular,
             color: COLORS.secondary,
             marginTop: 3,
           }}
@@ -50,10 +39,7 @@ const DetailsBid = ({ bid }) => {
           {bid.date}
         </Text>
       </View>
-
-      <EthPrice price={bid.price} />
+      <ETHPrice price={bid.price}/>
     </View>
   );
 };
-
-export default DetailsBid;

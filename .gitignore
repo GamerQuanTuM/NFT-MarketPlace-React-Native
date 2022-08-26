@@ -15,3 +15,5 @@ jspm_packages/
 
 #vscode
 .vscode
+
+*.txt

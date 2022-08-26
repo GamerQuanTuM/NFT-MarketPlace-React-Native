@@ -1,7 +1,6 @@
-import React from "react";
 import { View, Text, Image, TextInput } from "react-native";
 
-import { COLORS, FONTS, SIZES, assets } from "../constants";
+import { COLORS, assets, SIZES, FONTS } from "../constants";
 
 const HomeHeader = ({ onSearch }) => {
   return (
@@ -21,10 +20,12 @@ const HomeHeader = ({ onSearch }) => {
         <Image
           source={assets.logo}
           resizeMode="contain"
-          style={{ width: 90, height: 25 }}
+          style={{
+            width: 90,
+            height: 25,
+          }}
         />
-
-        <View style={{ width: 45, height: 45 }}>
+        <View style={{ width: 45, height: 55 }}>
           <Image
             source={assets.person01}
             resizeMode="contain"
@@ -43,7 +44,6 @@ const HomeHeader = ({ onSearch }) => {
           />
         </View>
       </View>
-
       <View style={{ marginVertical: SIZES.font }}>
         <Text
           style={{
@@ -52,9 +52,8 @@ const HomeHeader = ({ onSearch }) => {
             color: COLORS.white,
           }}
         >
-          Hello Victoria 👋
+          Hello Victoria👋
         </Text>
-
         <Text
           style={{
             fontFamily: FONTS.bold,
@@ -63,10 +62,9 @@ const HomeHeader = ({ onSearch }) => {
             marginTop: SIZES.base / 2,
           }}
         >
-          Let’s find masterpiece Art
+          Let's find a masterpiece
         </Text>
       </View>
-
       <View style={{ marginTop: SIZES.font }}>
         <View
           style={{
@@ -82,7 +80,11 @@ const HomeHeader = ({ onSearch }) => {
           <Image
             source={assets.search}
             resizeMode="contain"
-            style={{ width: 20, height: 20, marginRight: SIZES.base }}
+            style={{
+              width: 20,
+              height: 20,
+              marginRight: SIZES.base,
+            }}
           />
           <TextInput
             placeholder="Search NFTs"
